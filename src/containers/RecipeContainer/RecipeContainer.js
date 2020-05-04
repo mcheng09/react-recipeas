@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+import api from './../../store/api'
+
+import Aux from './../../hoc/Aux/Aux'
 import RecipeSearch from './../../components/RecipeSearch/RecipeSearch'
 import RecipeList from './../../components/RecipeList/RecipeList'
 
@@ -10,7 +13,7 @@ const RecipeContainer = () => {
   const clickHelper = (e, search) => {
     e.preventDefault();
 
-    axios.get('https://api.edamam.com/search?q=' + search + '&app_id='+ process.env.REACT_APP_EDAMAM_APP_ID + '&app_key=' + process.env.REACT_APP_EDAMAM_API_KEY)
+    axios.get(api + search)
       .then(function(res){
         console.log(res.data.hits)
         setFilteredRecipes(res.data.hits);
@@ -18,11 +21,10 @@ const RecipeContainer = () => {
   }
 
   return (
-    <div>
-      <h1>ReciPeas</h1>
+    <Aux>
       <RecipeSearch clickHelper={clickHelper }/>
       <RecipeList filteredRecipes={filteredRecipes}/>
-    </div>
+    </Aux>
   )
 }
 
