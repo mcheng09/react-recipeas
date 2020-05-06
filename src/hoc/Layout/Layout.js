@@ -2,14 +2,17 @@ import React from 'react';
 
 import Aux from './../Aux/Aux'
 import Navigation from './../../components/Navigation/Navigation'
-import RecipeContainer from './../../containers/RecipeContainer/RecipeContainer'
+
+import styles from './Layout.module.scss'
 
 function Layout(props) {
   return (
-    <Aux>
+    <div className={styles.Main}>
       <Navigation />
-      <RecipeContainer />
-    </Aux>
+      <main>
+        {props.children}
+      </main>
+    </div>
   )
 }
 
