@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import styles from './NavigationItem.module.scss';
+
 const NavigationItem = () => {
   return (
     <div>
-      <Link to='/'>Home</Link>
-      <Link to='/about'>About</Link>
-      <Link to='/recipes'>Search Recipe</Link>
+      <Link className={styles.NavLink} to='/'>Home</Link>
+      <Link className={styles.NavLink} to='/about'>About</Link>
+      <Link className={styles.NavLink} to='/recipes'>Search Recipe</Link>
     </div>
   )
 }
