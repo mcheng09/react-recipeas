@@ -1,6 +1,15 @@
 .Navigation {
   background: lightgreen;
   padding: 16px;
+  min-width: 300px;
+}
+
+.NavLogo {
+  width: 60px;
+  height: 60px;
+  background: blue;
+  color: white;
+  font-size: 36px;
 }
 
 .Navigation h1 {
