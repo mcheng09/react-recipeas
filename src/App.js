@@ -4,8 +4,9 @@ import './App.css';
 
 import Layout from './hoc/Layout/Layout'
 import HomePage from './pages/Home/Home';
-import AboutPage from './pages/About/About'
-import RecipeContainer from './containers/RecipeContainer/RecipeContainer'
+import AboutPage from './pages/About/About';
+import RecipeContainer from './containers/RecipeContainer/RecipeContainer';
+import ContactPage from './pages/Contact/Contact';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <BrowserRouter>
         <Layout>
             <Switch>
+              <Route path='/contact' component={ContactPage} />
               <Route path='/recipes' component={RecipeContainer} />
               <Route path='/about' component={AboutPage} />
               <Route path='/' component={HomePage} />
