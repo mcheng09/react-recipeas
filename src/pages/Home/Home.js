@@ -3,7 +3,8 @@ import React from 'react';
 function Home() {
   return (
     <div>
-      <h1>Home Component</h1>
+      <h1>Welcome to RecipEaze</h1>
+      <p>Click "Search Recipes" to start</p>
     </div>
   )
 }
