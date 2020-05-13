@@ -22,6 +22,7 @@ const RecipeContainer = () => {
 
   return (
     <Aux>
+      <h1>Search Recipe</h1>
       <RecipeSearch clickHelper={clickHelper }/>
       <RecipeList filteredRecipes={filteredRecipes}/>
     </Aux>
