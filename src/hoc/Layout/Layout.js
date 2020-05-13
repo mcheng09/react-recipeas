@@ -9,9 +9,9 @@ function Layout(props) {
   return (
     <div className={styles.Main}>
       <Navigation />
-      <main>
+      <div className={styles.Container}>
         {props.children}
-      </main>
+      </div>
     </div>
   )
 }
