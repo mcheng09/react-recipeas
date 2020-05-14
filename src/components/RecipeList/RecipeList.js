@@ -1,6 +1,7 @@
 import React from 'react';
 
 import RecipeItem from './RecipeItem/RecipeItem';
+import styles from './RecipeList.module.scss'
 
 const RecipeList = (props) => {
 
@@ -11,7 +12,7 @@ const RecipeList = (props) => {
   })
 
   return (
-    <div>
+    <div className={styles.RecipeList}>
       {displayRecipes}
     </div>
   )
